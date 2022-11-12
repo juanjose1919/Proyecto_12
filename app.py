@@ -96,6 +96,6 @@ sklearn_loadings = pca3.components_.T * np.sqrt(pca3.explained_variance_)
 sklearn_loadings'''
 st.code(code7, language='python')  
   
-st.image(./'Aportes_a_PCA1') 
-st.image(./'Aportes_a_PCA2')
-st.image(./'Aportes_a_PCA3')
+st.image(./carpeta/'Aportes_a_PCA1') 
+st.image(./carpeta/'Aportes_a_PCA2')
+st.image(./carpeta/'Aportes_a_PCA3')
