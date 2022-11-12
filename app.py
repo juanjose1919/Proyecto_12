@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.titile('HOLA MUNDO')
+st.tittle('HOLA MUNDO')
 
