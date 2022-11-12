@@ -75,7 +75,7 @@ st.header('La descripción de los componentes principales en conjunto con la mue
 st.table(pca_p.head(10))
 
 st.header('Grafica: PCA')
-st.image('/.carpeta/PCA.png')
+st.image('./carpeta/PCA.png')
 
   
   
