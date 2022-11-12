@@ -77,7 +77,8 @@ st.table(pca_p.head(10))
 st.header('Grafica: PCA')
 
 from pandas import DataFrame
-import plotly.graph_objects as go
+
+import plotly.graph_objs as go
 
 for m, zlow, zhigh in [('o', -50, -25), ('^', -30, -5)]:
     xs = pca_p.iloc[:,0]
