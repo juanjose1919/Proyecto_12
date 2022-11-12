@@ -125,4 +125,4 @@ plt.show()
 '''
 st.code(code9, language='python')
 
-st.image('./carpeta/Numero_optimo.PNG.png')
+st.image('./carpeta/Numero_optimo.png')
