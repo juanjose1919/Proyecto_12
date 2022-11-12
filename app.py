@@ -1,4 +1,4 @@
 import streamlit as st
 
-st.title('HOLA MUNDO')
-
+st.title('INDICE DE LA FELICIDAD')
+st.subtitle('INDICE DE LA FELICIDAD')
