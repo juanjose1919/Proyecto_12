@@ -67,3 +67,14 @@ pca_p.head()
 '''
 st.code(code6, language='python')
 
+pca_p = pd.read_csv('./carpeta/pca_p.csv')
+st.header('Los primeros 10 países reducidos a 3 PCA:')
+st.table(pca_p.head(10))
+         
+st.header('La descripción de los componentes principales en conjunto con la muestra de países:')
+st.table(pca_p.head(10))
+
+
+  
+  
+  
