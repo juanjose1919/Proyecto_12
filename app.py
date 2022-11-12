@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-from pandas import DataFrame
+!pip install plotly.graph_objs
 import plotly.graph_objs as go
 
 st.title('INDICE DE LA FELICIDAD')
