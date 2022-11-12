@@ -1,5 +1,9 @@
 import streamlit as st
 import pandas as pd
+import numpy as np
+from pandas import DataFrame
+import plotly.graph_objs as go
+
 st.title('INDICE DE LA FELICIDAD')
 st.subheader('Aquí se observan 10 variables ontemidas del Banco Mundial cuyo proposito es de expicar la felicidad de un país, cuya muestra es de 60 países alrededor del mundo')
 
@@ -77,7 +81,6 @@ st.table(pca_p.head(10))
 st.header('Grafica: PCA')
 
 from pandas import DataFrame
-
 import plotly.graph_objs as go
 
 for m, zlow, zhigh in [('o', -50, -25), ('^', -30, -5)]:
