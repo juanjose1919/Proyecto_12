@@ -89,6 +89,7 @@ trace = [go.Scatter3d(x = xs, y= ys, z= zs)]
 
 fig = go.Figure(trace, layout=go.Layout(margin = dict(l = 0, r = 0),scene = scene, height = 800, width = 800))
 fig.show()
+st.plotly_chart(fig,use_container_widht=True)
 
   
   
