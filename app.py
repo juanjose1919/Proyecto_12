@@ -99,3 +99,30 @@ st.code(code7, language='python')
 st.image('./carpeta/Aportes_a_PC1.png') 
 st.image('./carpeta/Aportes_a_PC2.png')
 st.image('./carpeta/Aportes_a_PC3.png')
+
+
+st.header('K-means')
+code8 = '''plt.rcParams['figure.figsize'] = (16, 9)
+plt.style.use('ggplot')'''
+st.code(code8, language='python')
+
+st.header('K-means')
+code9 = '''
+#kmenas with PCA
+X = np.array(pca_p)
+y = np.array(pca_p)
+#hllamos el punto de codo del valor k
+Nc = range(1, 10)
+kmeans = [KMeans(n_clusters=i) for i in Nc]
+kmeans
+score = [kmeans[i].fit(X).score(X) for i in range(len(kmeans))]
+score
+plt.plot(Nc,score)
+plt.xlabel('Number of Clusters')
+plt.ylabel('Score')
+plt.title('Elbow Curve')
+plt.show()
+'''
+st.code(code9, language='python')
+
+st.image('./carpeta/Numero_optimo.PNG.png')
