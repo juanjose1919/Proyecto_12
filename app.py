@@ -10,7 +10,7 @@ st.table(data.head(10))
 st.header('La descripción de las variables evaluadas en conjunto con la muestra de países:')
 st.table(data.describe())
 
-st.subheader('El algoritmo de reducción de dimensionalidad seleccionado es:)
+st.subheader('El algoritmo de reducción de dimensionalidad seleccionado es:')
 
 st.subheader('PCA:')
 st.text('Recordemos que es un método estadístico el cual permite simplificar la complejidad de espacios muestrales con muchas dimensiones (10 dimensiones) a la vez que conserva su información')
