@@ -18,7 +18,7 @@ st.write('Recordemos que es un método estadístico el cual permite simplificar 
 st.subheader('Los pasos a seguir son:')
 
 st.write('1. Estandarizar el dataset')
-code = '''lista = []
+code1 = '''lista = []
 for i in X.T:
   u = i.mean()
   s = i.std()
@@ -26,20 +26,44 @@ for i in X.T:
   lista.append(scal)
 
 x_scal = np.array(lista).T'''
-st.code(code, language='python')
+st.code(code1, language='python')
 
 st.write('2. Construir la matriz de covarianzas')
-
+code2 = '''cov_x = np.cov(x_scal.T)
+cov_x'''
+st.code(code2, language='python')
 
 st.write('3. Descomponer la matriz de covarianzas en valores propios y vectores propios')
-
+code3 = '''cov_x = np.cov(x_scal.T)
+cov_x
+np.linalg.eig(pd.DataFrame(X).corr().to_numpy())'''
+st.code(code3, language='python')
 
 st.write('4. Seleccionar  vectores propios, los cuales corresponden a los  vectores más grandes, donde  representa la dimensionalidad del nuevo dataset')
+code4 = ''' 
+val_p, vec_p = linalg.eig(cov_x)
+val_p, vec_p
 
+# 3 componentes
+
+val_p = val_p[:3]
+vec_p = vec_p[:, :3]
+'''
+st.code(code4, language='python')
 
 st.write('5. Construir una matriz de proyección , del top de  vectores propios')
+code5 = ''' 
+W = vec_p
 
+# proyectar X en W
+pca_p = x_scal @ W
+'''
+st.code(code5, language='python')
 
 st.write('6. Transformar el dataset input, , utilizando la matriz de proyección  para obtener el nuevo subespacio -dimensional')
-
+code6 = ''' 
+pca_p = pd.DataFrame(pca_p, columns=[f'PC{i}' for i in range(1, pca_p.shape[1] + 1)])
+pca_p.head()
+'''
+st.code(code6, language='python')
 
