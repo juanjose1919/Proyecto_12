@@ -74,7 +74,8 @@ st.table(pca_p.head(10))
 st.header('La descripción de los componentes principales en conjunto con la muestra de países:')
 st.table(pca_p.head(10))
 
+st.header('Grafica: PCA')
+st.image('/.carpeta/PCA.png')
 
-  
   
   
