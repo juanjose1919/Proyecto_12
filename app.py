@@ -5,3 +5,4 @@ st.subheader('Aquí se observan 10 variables ontemidas del Banco Mundial cuyo pr
 
 data = pd.read_csv('./carpeta/data.csv')
 st.table(data.head(10))
+st.table(data.describe())
