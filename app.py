@@ -72,7 +72,7 @@ st.header('Los primeros 10 países reducidos a 3 PCA:')
 st.table(pca_p.head(10))
          
 st.header('La descripción de los componentes principales en conjunto con la muestra de países:')
-pca_p.head(10)
+st.table(pca_p.head(10))
 
 
   
