@@ -87,7 +87,7 @@ for m, zlow, zhigh in [('o', -50, -25), ('^', -30, -5)]:
 scene = dict(xaxis = dict(title = 'PCA1'), yaxis = dict(title = 'PCA2'), zaxis= dict(title = 'PCA3'))
 trace = [go.Scatter3d(x = xs, y= ys, z= zs)]
 
-fig = go.Figure(trace1, layout=go.Layout(margin = dict(l = 0, r = 0),scene = scene, height = 800, width = 800))
+fig = go.Figure(trace, layout=go.Layout(margin = dict(l = 0, r = 0),scene = scene, height = 800, width = 800))
 fig.show()
 
   
