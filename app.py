@@ -290,3 +290,4 @@ st.code(code18, language='python')
 st.image('./carpeta/davies_bouldin_score.png')
 
 st.header('Conclusión General')
+st.write('aqui va') 
