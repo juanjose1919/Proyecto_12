@@ -198,7 +198,7 @@ x_3 = np.vstack(puntos_centroides[3])
 '''
 st.code(code12 , language='python')
 
-code13 '''
+code13 ='''
 #kmenas with PCA
 # Predicting the clusters
 labels = kmeans.predict(X)
