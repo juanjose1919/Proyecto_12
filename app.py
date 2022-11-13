@@ -296,3 +296,6 @@ st.image('./carpeta/davies_bouldin_score.png')
 st.header('Conclusión General')
 st.write('A partir de datos obtenidos del banco mundial se busca explicar la felicidad de los países a partir de las variables Ingreso medio de la población, Porcentaje del PIB invertido en educación, Tasa de desempleo, Gasto en salud per capita, Expectativa de vida, PIB per capita, Capital humano, Inflación, Mortalidad infantil y Derechos legales.')
 st.write('Por medio de K-means con análisis de componentes principales le logra reducir la dimencionalidad y diferenciar cada país en un cluster en base a características similares, se determinan 3 dimensiones y cuatro centroides de los cuales se corrigieron las distancias por medio de interaciones hasta encontrar el punto óptimo de los mismos, así se logra clasificar a los países en cuatro grupos diferenciados que reflejan distintos niveles de felicidad para cada uno de ellos.') 
+
+st.header('Link al notebook')
+st.write(' https://colab.research.google.com/drive/1SYTS2i6DFLgMffuS2IyBoc0sA2YByZmi?usp=share_link  ')
