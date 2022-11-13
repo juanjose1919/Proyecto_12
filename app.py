@@ -260,6 +260,8 @@ st.code(code16, language='python')
 st.image('./carpeta/tres.png')
 
 
+st.header('davies_bouldin_score')
+
 code17 ='''
 results = {}
 
