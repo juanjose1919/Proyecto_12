@@ -109,7 +109,6 @@ code8 = '''plt.rcParams['figure.figsize'] = (16, 9)
 plt.style.use('ggplot')'''
 st.code(code8, language='python')
 
-st.header('K-means')
 code9 = '''
 #kmenas with PCA
 X = np.array(pca_p)
@@ -130,7 +129,6 @@ st.code(code9, language='python')
 
 st.image('./carpeta/Numero_optimo.png')
 
-st.header('K-means')
 code10 = '''
 kmeans = KMeans(n_clusters=4).fit(X)
 centroids = kmeans.cluster_centers_
