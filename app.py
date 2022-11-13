@@ -105,7 +105,7 @@ st.write('En el caso del primer pca podemos evidenciar que las variables que má
 st.image('./carpeta/Aportes_a_PC2.png')
 st.write('Para el segundo pca aquellas que tienen aportes más significativos son las de desempleo e inflación')
 st.image('./carpeta/Aportes_a_PC3.png')
-st.image('En el gráfico se muestra que para el tercer pca más variables que más aportan son en primer lugar los derechos legales, luego la educación y en tercer lugar la inflación')
+st.write('En el gráfico se muestra que para el tercer pca más variables que más aportan son en primer lugar los derechos legales, luego la educación y en tercer lugar la inflación')
 
 
 st.header('K-means')
