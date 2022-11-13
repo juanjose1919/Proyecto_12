@@ -220,7 +220,7 @@ ax.scatter(centroides[1][0],centroides[1][1], marker='x',color='k')
 ax.scatter(centroides[2][0],centroides[2][1], marker='x',color='k')
 ax.scatter(centroides[3][0],centroides[3][1], marker='x',color='k')
 '''
-st.code(code13 language='python')
+st.code(code13, language='python')
 
 st.image('./carpeta/otra.png')
 
