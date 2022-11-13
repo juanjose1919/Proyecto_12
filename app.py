@@ -77,6 +77,9 @@ st.table(pca_p.head(10))
 st.header('La descripción de los componentes principales en conjunto con la muestra de países:')
 st.table(pca_p.head(10))
 
+st.subheader('Número de componentes optimos')
+st.image('./carpeta/Num_componentes.png')
+
 st.header('Grafica: PCA')
 
 
@@ -126,3 +129,4 @@ plt.show()
 st.code(code9, language='python')
 
 st.image('./carpeta/Numero_optimo.png')
+
