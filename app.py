@@ -135,3 +135,25 @@ centroids = kmeans.cluster_centers_
 centroids
 '''
 st.code(code10,  language='python')
+
+code11 = '''
+#kmeans with PCA
+# Predicting the clusters
+labels = kmeans.predict(X)
+# Getting the cluster centers
+C = kmeans.cluster_centers_
+colores=['blue','cyan','green','red']
+asignar=[]
+for row in labels:
+  asignar.append(colores[row])
+
+fig = plt.figure()
+ax = Axes3D(fig)
+ax.scatter(X[:, 0], X[:, 1], X[:, 2], c=asignar,s=60)
+ax.scatter(C[:, 0], C[:, 1], C[:, 2], marker='*', c=colores, s=1000)
+'''
+st.code(code11,  language='python')
+
+st.image('./carpeta/kmeans_PCA.png')
+
+
