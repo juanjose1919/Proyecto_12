@@ -258,3 +258,25 @@ plt.show()
 '''
 st.code(code16, language='python')
 st.image('./carpeta/tres.png')
+
+
+code17 ='''
+results = {}
+
+for i in range(2,11):
+    kmeans = KMeans(n_clusters=i, random_state=30)
+    labels = kmeans.fit_predict(X)
+    db_index = davies_bouldin_score(X, labels)
+    results.update({i: db_index})
+'''
+st.code(code17, language='python')
+
+code18 ='''
+plt.plot(list(results.keys()), list(results.values()))
+plt.xlabel("Number of clusters")
+plt.ylabel("Davies-Boulding Index")
+plt.show()
+'''
+st.code(code18, language='python')
+
+st.image('./carpeta/davies_bouldin_score.png')
