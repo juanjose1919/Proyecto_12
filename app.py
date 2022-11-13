@@ -156,4 +156,73 @@ st.code(code11,  language='python')
 
 st.image('./carpeta/kmeans_PCA.png')
 
+code12= '''
+#calcular distancia euclidiana
+def dis_eucl(a, b):
+  return np.sqrt(sum((a - b)**2))
+  
+#escoger los centroides, k=num_centroides
+centroides = {} #centroides
+k = 4 #num_centroides
+num_iteraciones = 200
+for i in range(k):
+  centroides[i] = X[np.random.choice(len(X))]
+
+for i in range(num_iteraciones):
+  #distancias
+  distances = {}
+  for pos, dato in enumerate(X):
+    distances[pos] = []
+    for _ , centroide in centroides.items():
+      distances[pos].append(dis_eucl(centroide, dato))
+
+  #asignación
+  puntos_centroides = {}
+
+  for i in range(k):
+    puntos_centroides[i] = []
+
+  for dato, dists in distances.items():
+    puntos_centroides[dists.index(min(dists))].append(X[dato])
+
+  #nuevos centroides
+
+  for cent, datos in puntos_centroides.items():
+    centroides[cent] = np.average(datos, axis=0)
+    
+    
+x_0 = np.vstack(puntos_centroides[0])
+x_1 = np.vstack(puntos_centroides[1])
+x_2 = np.vstack(puntos_centroides[2])
+x_3 = np.vstack(puntos_centroides[3])
+'''
+st.code(code12  language='python')
+
+code13 '''
+#kmenas with PCA
+# Predicting the clusters
+labels = kmeans.predict(X)
+# Getting the cluster centers
+C = kmeans.cluster_centers_
+colores=['blue','cyan','green','red']
+asignar=[]
+for row in labels:
+  asignar.append(colores[row])
+
+fig = plt.figure()
+ax = Axes3D(fig)
+ax.scatter(x_0[:,0],x_0[:,1])
+ax.scatter(x_1[:,0],x_1[:,1])
+ax.scatter(x_2[:,0],x_2[:,1])
+ax.scatter(x_3[:,0],x_3[:,1])
+ax.scatter(centroides[0][0],centroides[0][1], marker='x',color='k')
+ax.scatter(centroides[1][0],centroides[1][1], marker='x',color='k')
+ax.scatter(centroides[2][0],centroides[2][1], marker='x',color='k')
+ax.scatter(centroides[3][0],centroides[3][1], marker='x',color='k')
+'''
+st.code(code13 language='python')
+
+st.image('./carpeta/otra.png')
+
+
 
