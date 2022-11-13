@@ -155,6 +155,9 @@ ax.scatter(C[:, 0], C[:, 1], C[:, 2], marker='*', c=colores, s=1000)
 st.code(code11,  language='python')
 
 st.image('./carpeta/kmeans_PCA.png')
+st.write('En el gráfico anterior se puede observar cuatro centroides, entre estos el grupo celeste es el más diferenciado pues presenta mayor distancia con el resto de los datos, para el grupo rojo la agrupación se vuelve menos clara y se evidencian datos erróneamente clasificados que podrían pertenecer a otros grupos. Por último los dos grupos restantes, verde y azul oscuro, no presentan distanciamiento significativo entre sus datos y la participación de grupos se hace menos clara')
+
+
 
 code12= '''
 #calcular distancia euclidiana
@@ -223,6 +226,7 @@ ax.scatter(centroides[3][0],centroides[3][1], marker='x',color='k')
 st.code(code13, language='python')
 
 st.image('./carpeta/otra.png')
+st.write('En este gráfico se presentan cuatro centroides y cuatro grupos diferenciados, los datos del grupo azul se encuentran a mayor distancia de los demás grupos, los tres restantes presentan menor distancia entre ellos pero aún así se evidencia una partición clara y una distancia correspondiente entre sus centroides')
 
 code14 ='''
 # Obtener los valores y trazarlos PCA1 Y PCA2
@@ -247,6 +251,8 @@ plt.show()
 '''
 st.code(code15, language='python')
 st.image('./carpeta/dos.png')
+st.write('En el anterior gráfico se generan cuatro centroides sin una partición completamente clara entre los grupos, en el caso del grupo celeste tiene datos dispersos y el centroide está distanciado, el grupo azul oscuro tiene menor distanciamiento pero en el caso de el rojo y el verde no se ve una clara agrupación, los datos de ambos están ubicados alrededor del centroide rojo mientras el centroide verde se encuentra a una distancia bastante significativa.')
+
 code16 ='''
 # Obtener los valores y trazarlos PCA2 Y PCA3
 f1 = pca_p['PC2'].values
@@ -258,7 +264,7 @@ plt.show()
 '''
 st.code(code16, language='python')
 st.image('./carpeta/tres.png')
-
+st.write('En este gráfico tampoco se presenta un agrupamiento diferenciado pues ninguno de los grupos se encuentra ubicado correctamente entorno a su centroide. El centroide verde se encuentra a una distancia significativa mientras que la mayoría de sus datos se ubican al rededor del centrado azul, en torno al centroide rojo se encuentra el grupo rojo junto a varios datos de los demas grupos clasificados erróneamente, por último algunos datos del grupo celeste se encuentran mas cercanos a su centroide mientras la mayoría están dispersos entre los otros grupos.')
 
 st.header('davies_bouldin_score')
 
