@@ -79,6 +79,7 @@ st.table(pca_p.head(10))
 
 st.subheader('Número de componentes optimos')
 st.image('./carpeta/Num_componentes.png')
+st.write('En el gráfico se evidencia que los datos inician en un porcentaje de varianza explicada cercana 0.4 y comienzan a separarse progresivamente hasta tres componentes a partir de este los porcentajes de varianza explicada comienzan a dispersarse en mayor medida por lo cual este sería el número óptimo de componentes.')
 
 st.header('Grafica: PCA')
 
