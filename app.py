@@ -224,5 +224,37 @@ st.code(code13, language='python')
 
 st.image('./carpeta/otra.png')
 
+code14 ='''
+# Obtener los valores y trazarlos PCA1 Y PCA2
+f1 = pca_p['PCA1'].values
+f2 = pca_p['PCA2'].values
 
+plt.scatter(f1, f2, c=asignar, s=70)
+plt.scatter(C[:, 0], C[:, 1], marker='*', c=colores, s=1000)
+plt.show()
+'''
+st.code(code14, language='python')
+st.image('./carpeta/una.png')
 
+code15 ='''
+# Obtener los valores y trazarlos PCA1 Y PCA3
+f1 = pca_p['PCA1'].values
+f2 = pca_p['PCA3'].values
+
+plt.scatter(f1, f2, c=asignar, s=70)
+plt.scatter(C[:, 0], C[:, 1], marker='*', c=colores, s=1000)
+plt.show()
+'''
+st.code(code15, language='python')
+st.image('./carpeta/dos.png')
+code16 ='''
+# Obtener los valores y trazarlos PCA2 Y PCA3
+f1 = pca_p['PC2'].values
+f2 = pca_p['PC3'].values
+
+plt.scatter(f1, f2, c=asignar, s=70)
+plt.scatter(C[:, 0], C[:, 1], marker='*', c=colores, s=1000)
+plt.show()
+'''
+st.code(code16, language='python')
+st.image('./carpeta/tres.png')
