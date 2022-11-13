@@ -79,7 +79,7 @@ st.table(pca_p.head(10))
 
 st.subheader('Número de componentes optimos')
 st.image('./carpeta/Num_componentes.png')
-st.write('En el gráfico se evidencia que los datos inician en un porcentaje de varianza explicada cercana 0.4 y comienzan a separarse progresivamente hasta tres componentes a partir de este los porcentajes de varianza explicada comienzan a dispersarse en mayor medida por lo cual este sería el número óptimo de componentes.')
+st.write('En el gráfico se evidencia un punto de codo en un porcentaje de varianza explicada cercana 0.4 y comienzan a separarse progresivamente hasta tres componentes a partir de este los porcentajes de varianza explicada comienzan a dispersarse en mayor medida por lo cual este sería el número óptimo de componentes.')
 
 st.header('Grafica: PCA')
 
@@ -101,11 +101,11 @@ sklearn_loadings'''
 st.code(code7, language='python')  
   
 st.image('./carpeta/Aportes_a_PC1.png') 
-st.write('En el caso del primer pca podemos evidenciar que las variables que más aportan son la mortalidad, la inflación y el pib per capita')
+st.write('En el caso del primer pca podemos evidenciar que las variables que más aportan son la mortalidad infantil, la inflación y el pib per capita')
 st.image('./carpeta/Aportes_a_PC2.png')
 st.write('Para el segundo pca aquellas que tienen aportes más significativos son las de desempleo e inflación')
 st.image('./carpeta/Aportes_a_PC3.png')
-st.write('En el gráfico se muestra que para el tercer pca más variables que más aportan son en primer lugar los derechos legales, luego la educación y en tercer lugar la inflación')
+st.write('En el gráfico se muestra que para el tercer pca más variables que más aportan son en primer lugar los derechos legales, luego la inversión en educación y en tercer lugar la inflación')
 
 
 st.header('K-means')
@@ -294,4 +294,5 @@ st.code(code18, language='python')
 st.image('./carpeta/davies_bouldin_score.png')
 
 st.header('Conclusión General')
-st.write('aqui va') 
+st.write('A partir de datos obtenidos del banco mundial se busca explicar la felicidad de los países a partir de las variables Ingreso medio de la población, Porcentaje del PIB invertido en educación, Tasa de desempleo, Gasto en salud per capita, Expectativa de vida, PIB per capita, Capital humano, Inflación, Mortalidad infantil y Derechos legales.')
+st.write('Por medio de K-means con análisis de componentes principales le logra reducir la dimencionalidad y diferenciar cada país en un cluster en base a características similares, se determinan 3 dimensiones y cuatro centroides de los cuales se corrigieron las distancias por medio de interaciones hasta encontrar el punto óptimo de los mismos, así se logra clasificar a los países en cuatro grupos diferenciados que reflejan distintos niveles de felicidad para cada uno de ellos.') 
