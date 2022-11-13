@@ -196,7 +196,7 @@ x_1 = np.vstack(puntos_centroides[1])
 x_2 = np.vstack(puntos_centroides[2])
 x_3 = np.vstack(puntos_centroides[3])
 '''
-st.code(code12  language='python')
+st.code(code12 , language='python')
 
 code13 '''
 #kmenas with PCA
