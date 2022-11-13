@@ -130,3 +130,10 @@ st.code(code9, language='python')
 
 st.image('./carpeta/Numero_optimo.png')
 
+st.header('K-means')
+code10 = '''
+kmeans = KMeans(n_clusters=4).fit(X)
+centroids = kmeans.cluster_centers_
+centroids
+'''
+st.code(code10,  language='python')
